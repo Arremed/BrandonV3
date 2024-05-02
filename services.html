@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon Code's</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #666;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a.home {
+            color: #fff; /* Same color as home link */
+        }
+        nav a.about {
+            color: #fff; /* Same color as home link */
+        }
+        nav a.services {
+            color: #fff; /* Same color as home link */
+        }
+        nav a.contact {
+            color: #fff; /* Same color as home link */
+        }
+        nav a:hover,
+        nav a:active,
+        nav a:focus {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Services</h1>
+    </header>
+    <nav>
+        <a href="index.html" class="home">Home</a>
+        <a href="about.html" class="about">About</a>
+        <a href="services.html" class="services">Services</a>
+        <a href="contact.html" class="contact">Contact</a>
+    </nav>
+    <section id="services-content">
+        <h2>Services</h2>
+        <p>Our services include:</p>
+        <form id="service-form" method="get" target="_blank">
+            <select name="service" onchange="selectService(this)">
+                <option value="">Select Service</option>
+                <option value="HtmlLanguage.html">HTML Language</option>
+                <option value="CssLanguage.html">Style.css Language</option>
+            </select>
+            <button type="submit">Go</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+    <script>
+        function selectService(select) {
+            var form = document.getElementById("service-form");
+            form.action = select.value;
+        }
+    </script>
+</body>
+</html>
